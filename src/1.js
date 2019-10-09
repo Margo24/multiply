@@ -1,5 +1,6 @@
-module.exports = function multiply(first, second) {
-  // your solution
+function multiply(first, second) {
+    let i;
+// your solution
     if (first === '0' || second === '0') {
         return '0'
     } else {
@@ -21,10 +22,14 @@ module.exports = function multiply(first, second) {
         for (i=result.length-1; i>0; i--){
             tran = result[i-1]*10+tran;
             outString=tran%10+outString;
+            console.log(outString);
             tran = Math.floor(tran/10);
         }
         return tran+outString;
+        console.log(tran+outString);
     }
 }
 
-//console.log(multiply('329568934658432659586', '58379426534596'));
+console.log(multiply('5','10'));
+
+
